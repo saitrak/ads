@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tool Website</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .tool-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .ad-banner {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tool-container">
+        <h1>My Awesome Tool</h1>
+        <p>Enter some input:</p>
+        <input type="text" id="inputField">
+        <button onclick="processInput()">Process</button>
+        <div id="output"></div>
+
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'YOUR_AD_KEY', // Replace with your Adsterra key
+                    'format' : 'banner',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="https://YOUR_ADSTERRA_URL/YOUR_AD_SCRIPT.js"></scr' + 'ipt>'); // Replace with your Adsterra URL
+            </script>
+        </div>
+        <p>More tool content and instructions here...</p>
+    </div>
+
+    <script>
+        function processInput() {
+            const input = document.getElementById('inputField').value;
+            document.getElementById('output').textContent = `Processed: ${input}`;
+        }
+    </script>
+</body>
+</html>
